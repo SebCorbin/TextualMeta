@@ -20,9 +20,11 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>MinimalTextualVersion</key>
+	<string>5.0.0</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2016 SebCorbin. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string></string>
+	<string>TPIMeta</string>
 </dict>
 </plist>

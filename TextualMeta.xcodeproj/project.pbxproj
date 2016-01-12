@@ -6,9 +6,16 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		583726B81C45282E003842A5 /* TPIMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 583726B71C45282E003842A5 /* TPIMeta.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		583726AC1C4526F4003842A5 /* TextualMeta.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextualMeta.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		583726AF1C4526F4003842A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583726B51C4527DB003842A5 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../../../../../Applications/Textual.app/Contents/Headers; sourceTree = "<group>"; };
+		583726B61C45282E003842A5 /* TPIMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPIMeta.h; sourceTree = "<group>"; };
+		583726B71C45282E003842A5 /* TPIMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPIMeta.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +48,10 @@
 		583726AE1C4526F4003842A5 /* TextualMeta */ = {
 			isa = PBXGroup;
 			children = (
+				583726B51C4527DB003842A5 /* Headers */,
 				583726AF1C4526F4003842A5 /* Info.plist */,
+				583726B61C45282E003842A5 /* TPIMeta.h */,
+				583726B71C45282E003842A5 /* TPIMeta.m */,
 			);
 			path = TextualMeta;
 			sourceTree = "<group>";
@@ -112,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583726B81C45282E003842A5 /* TPIMeta.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +211,10 @@
 		583726B31C4526F4003842A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Frameworks/**\"";
+				HEADER_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Headers/**\"";
 				INFOPLIST_FILE = TextualMeta/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.sebcorbin.blog.TextualMeta;
@@ -213,7 +227,10 @@
 		583726B41C4526F4003842A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Frameworks/**\"";
+				HEADER_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Headers/**\"";
 				INFOPLIST_FILE = TextualMeta/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.sebcorbin.blog.TextualMeta;
