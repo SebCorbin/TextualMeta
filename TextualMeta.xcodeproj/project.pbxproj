@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582591161C4543C3004FFA02 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 582591141C4543C3004FFA02 /* HTMLNode.m */; };
+		582591171C4543C3004FFA02 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 582591151C4543C3004FFA02 /* HTMLParser.m */; };
 		583726B81C45282E003842A5 /* TPIMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 583726B71C45282E003842A5 /* TPIMeta.m */; };
+		583726BD1C452F17003842A5 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 583726BC1C452F17003842A5 /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5825910E1C453FE0004FFA02 /* HTMLParser */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTMLParser; sourceTree = "<group>"; };
+		582591121C4541DA004FFA02 /* HTMLParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = TextualMeta/HTMLParser/HTMLParser.m; sourceTree = "<group>"; };
+		582591141C4543C3004FFA02 /* HTMLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HTMLNode.m; path = TextualMeta/HTMLParser/HTMLNode.m; sourceTree = "<group>"; };
+		582591151C4543C3004FFA02 /* HTMLParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = TextualMeta/HTMLParser/HTMLParser.m; sourceTree = "<group>"; };
 		583726AC1C4526F4003842A5 /* TextualMeta.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextualMeta.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		583726AF1C4526F4003842A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		583726B51C4527DB003842A5 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../../../../../Applications/Textual.app/Contents/Headers; sourceTree = "<group>"; };
 		583726B61C45282E003842A5 /* TPIMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPIMeta.h; sourceTree = "<group>"; };
 		583726B71C45282E003842A5 /* TPIMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPIMeta.m; sourceTree = "<group>"; };
+		583726BC1C452F17003842A5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583726BD1C452F17003842A5 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +41,10 @@
 		583726A31C4526F4003842A5 = {
 			isa = PBXGroup;
 			children = (
+				582591141C4543C3004FFA02 /* HTMLNode.m */,
+				582591151C4543C3004FFA02 /* HTMLParser.m */,
+				582591121C4541DA004FFA02 /* HTMLParser.m */,
+				583726BC1C452F17003842A5 /* libxml2.tbd */,
 				583726AE1C4526F4003842A5 /* TextualMeta */,
 				583726AD1C4526F4003842A5 /* Products */,
 			);
@@ -48,6 +61,7 @@
 		583726AE1C4526F4003842A5 /* TextualMeta */ = {
 			isa = PBXGroup;
 			children = (
+				5825910E1C453FE0004FFA02 /* HTMLParser */,
 				583726B51C4527DB003842A5 /* Headers */,
 				583726AF1C4526F4003842A5 /* Info.plist */,
 				583726B61C45282E003842A5 /* TPIMeta.h */,
@@ -122,6 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582591161C4543C3004FFA02 /* HTMLNode.m in Sources */,
+				582591171C4543C3004FFA02 /* HTMLParser.m in Sources */,
 				583726B81C45282E003842A5 /* TPIMeta.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +230,10 @@
 				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Frameworks/**\"";
-				HEADER_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Headers/**\"";
+				HEADER_SEARCH_PATHS = (
+					"\"/Applications/Textual.app/Contents/Headers/**\"",
+					"\"/usr/include/libxml2\"",
+				);
 				INFOPLIST_FILE = TextualMeta/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.sebcorbin.blog.TextualMeta;
@@ -230,7 +249,10 @@
 				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Frameworks/**\"";
-				HEADER_SEARCH_PATHS = "\"/Applications/Textual.app/Contents/Headers/**\"";
+				HEADER_SEARCH_PATHS = (
+					"\"/Applications/Textual.app/Contents/Headers/**\"",
+					"\"/usr/include/libxml2\"",
+				);
 				INFOPLIST_FILE = TextualMeta/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.sebcorbin.blog.TextualMeta;
@@ -259,6 +281,7 @@
 				583726B41C4526F4003842A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
